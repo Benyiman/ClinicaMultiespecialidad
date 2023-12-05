@@ -4,7 +4,7 @@ import { AgendarHoraComponent } from './Components/agendar-hora/agendar-hora.com
 import { HomeComponent} from './Components/home/home.component';
 
 const routes: Routes = [
-  {path: '',redirectTo: 'home', pathMatch: 'full'}, 
+  {path: '',redirectTo: 'agendar_hora', pathMatch: 'full'}, 
   {path: 'agendar_hora', component: AgendarHoraComponent},
   {path: 'home', component: HomeComponent}
 ];

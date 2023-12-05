@@ -29,7 +29,7 @@ export class AgendarHoraComponent implements OnInit {
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
     initialView: 'dayGridMonth',
-    initialEvents:INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
+    initialEvents:this.listarHora, // alternatively, use the `events` setting to fetch from a feed
     weekends: true,
     editable: true,
     selectable: true,
@@ -122,7 +122,7 @@ export class AgendarHoraComponent implements OnInit {
        // console.log(element.payload.doc.id)
        // console.log(element.payload.doc.data())
       })
-     // console.log(this.listarHora)
+      console.log(this.listarHora)
     })
   }
  

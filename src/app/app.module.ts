@@ -11,7 +11,8 @@ import { AgendarHoraComponent } from './Components/agendar-hora/agendar-hora.com
 import { IngresarMedicoComponent } from './Components/ingresar-medico/ingresar-medico.component';
 import { RegistroPagoComponent } from './Components/registro-pago/registro-pago.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
-
+import { environment } from '../app/environments/environment';
+import { AngularFireModule } from "@angular/fire/compat";
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     RegistroPagoComponent
   ],
   imports: [
+    FullCalendarModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FullCalendarModule
-    
+    AngularFireModule.initializeApp(environment.firebase),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
