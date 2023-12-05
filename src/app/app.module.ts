@@ -10,6 +10,8 @@ import { FichaClinicaComponent } from './Components/ficha-clinica/ficha-clinica.
 import { AgendarHoraComponent } from './Components/agendar-hora/agendar-hora.component';
 import { IngresarMedicoComponent } from './Components/ingresar-medico/ingresar-medico.component';
 import { RegistroPagoComponent } from './Components/registro-pago/registro-pago.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RegistroPagoComponent } from './Components/registro-pago/registro-pago.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FullCalendarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
