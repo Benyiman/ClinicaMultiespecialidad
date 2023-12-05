@@ -8,6 +8,8 @@ import { INITIAL_EVENTS, createEventId } from './event-utils';
 import { OnInit } from '@angular/core';
 import Calendario from 'src/app/Interfaces/Calendario.interface';
 import { CalendarioService } from 'src/app/Service/Calendario';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-agendar-hora',
   templateUrl: './agendar-hora.component.html',
@@ -48,6 +50,7 @@ export class AgendarHoraComponent implements OnInit {
 
   currentEvents = signal<EventApi[]>([]);
   fichaClinicaService: any;
+  
 
   constructor(private changeDetector: ChangeDetectorRef,
     private calendarService: CalendarioService
@@ -125,7 +128,6 @@ export class AgendarHoraComponent implements OnInit {
       console.log(this.listarHora)
     })
   }
- 
   
 }
 
